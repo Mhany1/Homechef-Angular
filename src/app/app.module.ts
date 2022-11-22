@@ -11,7 +11,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { initializeApp } from 'firebase/app';
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 import { provideAuth } from '@angular/fire/auth';
 import { getAuth } from 'firebase/auth';
 
@@ -46,6 +46,7 @@ import { AboutComponent } from './about/about.component';
 import { FinalpayComponent } from './finalpay/finalpay.component';
 import { FooterComponent } from './footer/footer.component';
 import { OffersComponent } from './offers/offers.component';
+import { environment } from 'src/environments/environment.prod';
 
 
 
