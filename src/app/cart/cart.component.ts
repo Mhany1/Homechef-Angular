@@ -49,16 +49,6 @@ export class CartComponent implements OnInit {
     }
   }
 
-  // submit() {
-  //   console.log(this.form.value.selectedSlides);
-  //   const mm= this.form.value.selectedSlides
-  //   const output = mm.map(Number);
-  //   var sum = output.reduce((acc: any, cur: any) => acc + cur, 0);
-  //   console.log(sum);
-    
-  // }
-
-  
 
   getData()
   {

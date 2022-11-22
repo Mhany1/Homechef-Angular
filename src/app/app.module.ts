@@ -30,7 +30,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';

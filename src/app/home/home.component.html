@@ -60,9 +60,9 @@
       </div>
     </div>
 
-    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="5" [spaceBetween]="14" [slidesPerGroup]="3" [navigation]="true" class="mySwiper w-100 sefood1">
+    <swiper style="justify-content:center; align-items: center;" [slidesPerView]="5" [spaceBetween]="14" [slidesPerGroup]="3" [navigation]="true" class="mySwiper w-100 sefood1">
       <ng-template  *ngFor="let pro of products " swiperSlide >
-        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+        <div class="col-lg-11 row-col-md-1 card p-0 m-2 card-hover">
           <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
       <div class="p-3 card-body">
           <p class="cart-title mb-0">{{pro.title}}</p>
