@@ -96,11 +96,12 @@
       <div class="p-3 card-body">
           <p class="cart-title mb-0">{{pro.title}}</p>
           <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
-          <div class="pricesala mt-2">
+          <p class="mt-1 des mb-0">{{pro.publisher}}</p>
+          <div class="pricesala">
             <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
           </div>
         </div>
-      <div class="mt-5 mb-0 smalls">
+      <div class="mt-0 mb-0 smalls">
           <ul class="d-flex list-unstyled sml">
               <li class="px-0">45-55 MIN |</li>
               <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
@@ -172,11 +173,12 @@
           <div class="p-3 card-body">
               <p style="background-color: #f07b00; height: 30px;" class="cart-title align-items-center mb-0">{{pro.title}}</p>
               <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
+              <p class="mt-1 des mb-0">{{pro.publisher}}</p>
               <div class="pricesala">
                 <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
               </div>
           </div>
-          <div class="mt-5 mb-0 text-center smalls">
+          <div class="mt-0 mb-0 text-center smalls">
               <ul class="d-flex list-unstyled text-center sml">
                   <li class="px-0">45-55 MIN |</li>
                   <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
@@ -293,12 +295,13 @@
       <div class="p-3 card-body">
           <p style="background-color: rgba(180, 76, 76, 0.87);height: 30px;" class="cart-title mb-0">{{pro.title}}</p>
           <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
+          <p class="mt-1 des mb-0">{{pro.publisher}}</p>
           <div class="pricesala mt-2">
             <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
           </div>
       </div>
       <div class="mt-0 mb-0 smalls">
-          <ul class="d-flex list-unstyled text-center text-align-center mt-3 sml">
+          <ul class="d-flex list-unstyled sml">
               <li class="px-0">45-55 MIN |</li>
               <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
               <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
