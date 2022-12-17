@@ -3,8 +3,7 @@
 }
 
 .card-hover{
-    transition: all .4s ease-in-out;
-    /* min-height: 60px; */
+    transition: all .4s ease-in-out
 }
 .card-hover:hover{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(19, 32, 38, 0.52) 0px 2px 16px 0px;
@@ -19,7 +18,7 @@
     border-radius: 3px;
     margin-right: 0.2em;
     color: #fff;
-    background-color: #008600;
+    /* background-color: #008600; */
     font-size: 11px;
 }
 .para-cart{
@@ -27,6 +26,11 @@
     font-size: 13px;
     font-weight: 600;
     line-height:1.2rem;
+    height: 59px;
+}
+
+.prod-img{
+    height: 142px;
 }
 
 .des{

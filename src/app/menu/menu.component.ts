@@ -19,31 +19,31 @@ export class MenuComponent implements OnInit {
   cart:any[]=[]
   amount:number=1
   user: string | undefined
+  categoryItemNotFound: boolean = false
 
-  constructor(private productsservive:ProductsService) { }
+  constructor(private productsservive:ProductsService) {}
 
   ngOnInit(): void {
     this.productsservive.getProducts().subscribe((data)=>{
       this.allproduct=data;
       this.filteredproducts = data;
-      setInterval(()=>this.clearValue(),1000)
     })
 
   }
   
   //search in menu
   clearValue(){
-     
      if( this.searchTerm == ''){
-      //  this.page.nativeElement.style.display='none'
-      //  this.not.nativeElement.style.display='block'
-       this.filteredproducts == this.allproduct
+       this.filteredproducts = this.allproduct
+       this.categoryItemNotFound = false
      }else{ 
       this.filteredproducts=this.allproduct.filter(d=>{
         return d.category.toLowerCase().includes(this.searchTerm.trim().toLowerCase())
       })
+      this.categoryItemNotFound = false
+     }if (this.filteredproducts.length == 0) {
+       this.categoryItemNotFound = true
      }
-    //  this.searchTerm='';
   }
 
 
@@ -52,18 +52,6 @@ export class MenuComponent implements OnInit {
  addItem(product:any)
  {
   var obj = {item:product,quantity:this.amount}
-  // if (this.user) {
-  //   console.log('yes man');
-  // }
-  // else{}
-   
-   
-    // console.log('insert ok');
-    // console.log(this.cart)
-    // localStorage.setItem('cart', JSON.stringify(this.cart))
-
-
-
     if (localStorage.getItem('cart')!=null) {
        this.cart = JSON.parse(localStorage.getItem('cart')!)
        var exist = this.cart.find(i => i.item.recipe_id == obj.item.recipe_id)
@@ -79,9 +67,5 @@ export class MenuComponent implements OnInit {
     this.cart.push(obj)
     localStorage.setItem('cart', JSON.stringify(this.cart))
    }
-  
  }
-    
-
-
 }

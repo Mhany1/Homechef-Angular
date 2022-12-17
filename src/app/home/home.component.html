@@ -64,11 +64,13 @@
       <ng-template  *ngFor="let pro of products " swiperSlide >
         <div class="col-lg-11 row-col-md-1 card p-0 m-2 card-hover">
           <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
-      <div class="p-3 card-body">
+        <div class="p-3 card-body">
           <p class="cart-title mb-0">{{pro.title}}</p>
           <h4 class="mt-1 mb-0 para-cart">{{pro.discraption}}</h4>
           <p class="mt-1 des mb-0">{{pro.publisher}}</p>
-          <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          <div class="pricesala">
+            <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          </div>
         </div>
       <div class="mt-0 mb-0">
           <ul class="d-flex list-unstyled sml">
@@ -87,19 +89,20 @@
         </ng-template>
     </swiper>
 
-    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="1" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 sefood2">
+    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="3" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 sefood2">
       <ng-template  *ngFor="let pro of products " swiperSlide >
-        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+        <div class="col-lg-11 col-11 row-col-md-1 card  p-0 m-2 justify-content-center card-hover">
           <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
       <div class="p-3 card-body">
           <p class="cart-title mb-0">{{pro.title}}</p>
           <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
-          <!-- <p class="mt-1 des">{{pro.publisher}}r</p> -->
-          <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          <div class="pricesala mt-2">
+            <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          </div>
         </div>
-      <div class="mt-0 mb-0">
+      <div class="mt-5 mb-0 smalls">
           <ul class="d-flex list-unstyled sml">
-              <li class="px-1">45-55 MIN |</li>
+              <li class="px-0">45-55 MIN |</li>
               <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
               <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
               <li style="color:grey ;" class="px-1">milk - </li>
@@ -141,7 +144,9 @@
               <p style="background-color: #f07b00;" class="cart-title mb-0">{{pro.title}}</p>
               <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
               <p class="mt-1 des mb-0">{{pro.publisher}}</p>
-              <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+              <div class="pricesala">
+                <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+              </div>
           </div>
           <div class="mt-0 mb-0">
               <ul class="d-flex list-unstyled sml">
@@ -160,19 +165,20 @@
           </ng-template>
         </swiper>
 
-        <swiper style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="1" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 beef2">
+        <swiper style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="3" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 beef2">
           <ng-template  *ngFor="let pro of productsteak " swiperSlide >
-            <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover">
+            <div  class="col-lg-11 col-11 row-col-md-1 card p-0 m-2 card-hover">
               <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
           <div class="p-3 card-body">
-              <p style="background-color: #f07b00;" class="cart-title mb-0">{{pro.title}}</p>
+              <p style="background-color: #f07b00; height: 30px;" class="cart-title align-items-center mb-0">{{pro.title}}</p>
               <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
-              <p class="mt-1 des">{{pro.publisher}}</p>
-              <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+              <div class="pricesala">
+                <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+              </div>
           </div>
-          <div class="mt-0 mb-0">
-              <ul class="d-flex list-unstyled sml">
-                  <li class="px-1">45-55 MIN |</li>
+          <div class="mt-5 mb-0 text-center smalls">
+              <ul class="d-flex list-unstyled text-center sml">
+                  <li class="px-0">45-55 MIN |</li>
                   <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
                   <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
                   <li style="color:grey ;" class="px-1">milk - </li>
@@ -280,20 +286,20 @@
 
     
 
-    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="10" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 mohanad1 ">
+    <swiper  style="justify-content:center; align-items: center;" [slidesPerView]="2" [spaceBetween]="9" [slidesPerGroup]="1" [navigation]="true" class="mySwiper w-100 mohanad1 ">
       <ng-template  *ngFor="let pro of productnew " swiperSlide >
-        <div  class="col-lg-11 row-col-md-1  card  p-0 m-2 card-hover ">
+        <div  class="col-lg-11 col-11 row-col-md-1  card  p-0 m-2 card-hover ">
           <img class="card-img-top h-50 " src="{{pro.image_url[0]}}" alt="">
       <div class="p-3 card-body">
-          <p style="background-color: rgba(180, 76, 76, 0.87)" class="cart-title mb-0">{{pro.title}}</p>
+          <p style="background-color: rgba(180, 76, 76, 0.87);height: 30px;" class="cart-title mb-0">{{pro.title}}</p>
           <h3 class="mt-2 mb-0 para-cart">{{pro.discraption}}</h3>
-          <p class="mt-1 des">{{pro.publisher}}</p>
-          <p class="mt-1 des">{{pro.category}}</p>
-          <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          <div class="pricesala mt-2">
+            <small class="price">${{pro.price}}</small><i (click)="addItem(pro)" class="fas fa-basket-shopping shopp ps-1 pe-0 mb-0" ></i>
+          </div>
       </div>
-      <div class="mt-0 mb-0">
-          <ul class="d-flex list-unstyled sml">
-              <li class="px-1">45-55 MIN |</li>
+      <div class="mt-0 mb-0 smalls">
+          <ul class="d-flex list-unstyled text-center text-align-center mt-3 sml">
+              <li class="px-0">45-55 MIN |</li>
               <li *ngIf="pro.bestSeller" class="px-0"><i class="fa-solid fa-heart" style="color: red;text-align: center;padding-right: 2px;"></i> </li>
               <li *ngIf="pro.newProduct" class="px-0"><i class="fab fa-odnoklassniki" style="color: rgb(233, 171, 57);text-align: center;"></i> |</li>
               <li style="color:grey ;" class="px-1">milk - </li>
@@ -308,12 +314,10 @@
       </ng-template>
     </swiper>
 
-    <div >
+    <div class="text-center">
       <button routerLink="/menu" class="btn supm mt-3 mb-3">See Full Menu</button>
     </div>
-    
-  <!-- </div>
-  </div> -->
+ 
 
   <!-- /***********************************************************************/ -->
 

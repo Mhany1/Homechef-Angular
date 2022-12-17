@@ -15,7 +15,7 @@ export class ProductdetailsComponent implements OnInit {
 
   constructor(private activatedRoute:ActivatedRoute,private productservice:ProductsService) {
     this.id=this.activatedRoute.snapshot.paramMap.get('recipe_id')
-    console.log(this.id);
+    this.date=new Date()
    }
     
   ngOnInit(): void {
@@ -25,13 +25,8 @@ export class ProductdetailsComponent implements OnInit {
       this.finalproduct=this.product.filter(p=>{
         return p.recipe_id == this.id
       })
-      // console.log(this.finalproduct);
       
     })
-    this.date=new Date()
-    // console.log(this.date);
     
   }
-
-
 }

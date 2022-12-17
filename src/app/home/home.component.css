@@ -196,8 +196,14 @@ justify-content: center;
   font-size: 13px;
   font-weight: 600;
   line-height:1.1rem;
+  height: 45px;
 }
-
+.smalls{
+  height: 33px;
+}
+.pricesala{
+  height: 25px;
+}
 .des{
    font-size: 12.5px;
    color: grey;
@@ -208,9 +214,7 @@ justify-content: center;
     font-weight: bold;
 }
 
-/* .main{
-    margin-left: 2rem;
-} */
+
 h2{
     color: #4C5C74;
     font-family: 'Libre Baskerville', serif;
@@ -254,18 +258,12 @@ h2{
 }
 
 .supm{
-  min-width: 10%;
-  /* height: 55px; */
   background-color: #008600;
   color: #fff;
   border: none;
-  /* margin-top: 35px; */
   border-radius: 3px;
   font-weight: 700;
   font-size: 1.0rem;
-  margin: auto;
-  display: inline-block;
-  margin-left: 45%;
   border: 1px solid #008600 !important;
 }
 .supm:hover{
